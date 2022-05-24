@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'montserrat';
-  src: url("montserrat-alternates-bold-webfont.woff2") format("woff2"), url("montserrat-alternates-bold-webfont.woff") format("woff");
+  font-family: 'Montserrat';
+  src: url("../fonts/montserrat_bold.woff2") format("woff2"), url("../fonts/montserrat_bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'montserrat';
-  src: url("montserrat-alternates-medium-webfont.woff2") format("woff2"), url("montserrat-alternates-medium-webfont.woff") format("woff");
+  font-family: 'Montserrat';
+  src: url("../fonts/montserrat_regular.woff2") format("woff2"), url("../fonts/montserrat_regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -18,7 +18,7 @@
 }
 
 .body {
-  font-family: 'gilroy', 'Times New Roman', sans-serif;
+  font-family: 'Montserrat', 'Times New Roman', sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -46,12 +46,120 @@
   height: auto;
 }
 
-a {
-  color: #ff0000;
+.header {
+  display: grid;
+  grid-template-columns: 1fr -webkit-min-content;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-a:hover {
-  color: #000000;
+.header__top {
+  grid-column: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__lang-item {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #B3B3BA;
+  padding: 5px 7px;
+  border-radius: 8px;
+}
+
+.header__lang-item:not(.header__lang-item--active):hover {
+  color: #ffff;
+  background-color: #F0145A;
+}
+
+.header__lang-item--active {
+  color: #ffff;
+  background-color: #F0145A;
+}
+
+.header__phone {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B3B3BA;
+  text-decoration: none;
+}
+
+.header__adress, .header__fb {
+  display: none;
+}
+
+.header__logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header__logo {
+  width: 69px;
+}
+
+.header__page {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #323264;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__page::before {
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 26px;
+  background-image: url("../../img/slash-verysmall.svg");
+  background-size: 13px 26px;
+}
+
+.main-menu__btn {
+  width: 32px;
+  height: 32px;
+  background-image: url(../../img/hamburger.png);
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-menu__list {
+  position: absolute;
+  right: 0;
+  top: 102px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  background-color: darkgray;
 }
 
 /*# sourceMappingURL=style.css.map */

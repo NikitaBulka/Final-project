@@ -1,0 +1,20 @@
+.main-menu{
+    &__btn{
+        width: 32px;
+        height: 32px;
+        background-image: url(../../img/hamburger.png);
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    &__list{
+        position: absolute;
+        right: 0;
+        top: 102px;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        background-color: darkgray;
+        // display: none;
+    }
+}
