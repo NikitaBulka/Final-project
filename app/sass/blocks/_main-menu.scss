@@ -2,7 +2,7 @@
     &__btn{
         width: 32px;
         height: 32px;
-        background-image: url(../../img/hamburger.png);
+        background-image: url(../../img/hamburger-white.png);
         border: 0;
         background-color: transparent;
         cursor: pointer;
@@ -13,8 +13,31 @@
         top: 102px;
         width: 100%;
         list-style: none;
-        padding: 0;
-        background-color: darkgray;
-        // display: none;
+        padding: 64px 12px 12px 12px;
+        text-align: center;
+        background: #FFFFFF;
+        border-radius: 12px 12px 0px 0px;
+        display: none;
+        & li:not(:last-child){
+            padding-bottom: 15px;
+        }
+        & a{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #24A3FF;
+            text-decoration: none;
+            padding: 7px 0;
+        }
+        & a:not(.accent):hover{
+            color:$hover;
+        }
+        & a:not(.accent):active{
+            color:$active;
+        }
+        & .accent{
+        color:$accent;
     }
+    }
+    
 }

@@ -3,10 +3,12 @@
     grid-template-columns: 1fr min-content;
     grid-template-rows: min-content min-content;
     align-items: center;
+    padding-bottom: 129px;
     &__top{
         grid-column: span 2;
         display: flex;
         justify-content: space-between;
+        padding: 10px 0;
     }
     &__lang{
         display: flex;
@@ -18,7 +20,7 @@
             letter-spacing: 1px;
             text-decoration: none;
             text-transform: uppercase;
-            color: #B3B3BA;
+            color: #FFFFFF;
             padding: 5px 7px;
             border-radius: 8px;
             &:not(.header__lang-item--active):hover{
@@ -35,7 +37,7 @@
         font-weight: 700;
         font-size: 16px;
         line-height: 20px;
-        color: #B3B3BA;
+        color: #FFFFFF;
         text-decoration: none;
     }
     &__adress,
@@ -47,23 +49,24 @@
         align-items: flex-start;
     }
     &__logo{
+        padding: 15px 4px 10px 0 ;
         width: 69px;
     }
     &__page{
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;
-        color: #323264;
+        color: #FFFFFF;
         display: flex;
         align-items: center;
-        &::before{
-            content: '';
-            display: inline-block;
-            width: 13px;
-            height: 26px;
-            background-image: url('../../img/slash-verysmall.svg');
-            background-size: 13px 26px;
-        }
+        // &::before{
+        //     content: '';
+        //     display: inline-block;
+        //     width: 13px;
+        //     height: 26px;
+        //     background-image: url('../../img/slash-verysmall.svg');
+        //     background-size: 13px 26px;
+        // }
     }
 
 }
