@@ -1,5 +1,34 @@
 // вынести все цвета
 $accent: #F0145A;
+$regular:#24A3FF;
 $hover: #0085FF;
 $active:#006CCF;
-$red-text: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+$basic: #ffffff;
+
+
+
+
+@mixin main-gradient {
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+}
+
+@mixin red-text {
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+@mixin text-h3 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: $regular;
+    }
+
+@mixin paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $basic;
+}

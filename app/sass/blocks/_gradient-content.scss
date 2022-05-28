@@ -1,6 +1,51 @@
 .gradient-content{
-    display: grid;
-    grid-template-columns: min-content;
-    grid-template-rows: 3(min-content);
-   
+    padding: 30px 15px 60px ;
+    &__block{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 6(16.6%);
+    }
+    &__arrow{
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $regular;
+        &::after{
+            content: '';
+            display: inline-block;
+            background-image: url(../../img/arrow.svg);
+            width: 12px;
+            height: 13px;
+        }
+    }
+    &__title{
+        @include red-text;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+    }
+    &__box{
+        padding-top: 30px;
+        & h3{
+        @include text-h3;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+        color: $regular;
+        }
+
+        & p{
+        @include paragraph;
+        }
+    }
+
+    
 }

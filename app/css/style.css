@@ -93,16 +93,101 @@
 }
 
 .gradient {
+  position: relative;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0px 0px 12px 12px;
 }
 
+.gradient::before {
+  content: '';
+  background: #CACADB;
+  border-radius: 0px 0px 12px 12px;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: -10px;
+  height: 10px;
+}
+
+.gradient::after {
+  content: '';
+  background: #E7E7F2;
+  border-radius: 0px 0px 12px 12px;
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: -20px;
+  height: 10px;
+}
+
 .gradient-content {
+  padding: 30px 15px 60px;
+}
+
+.gradient-content__block {
+  width: 100%;
   display: grid;
-  grid-template-columns: -webkit-min-content;
-  grid-template-columns: min-content;
-  grid-template-rows: 3 -webkit-min-content;
-  grid-template-rows: 3 min-content;
+  grid-template-columns: 100%;
+  grid-template-rows: 6 16.6%;
+}
+
+.gradient-content__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #24A3FF;
+}
+
+.gradient-content__arrow::after {
+  content: '';
+  display: inline-block;
+  background-image: url(../../img/arrow.svg);
+  width: 12px;
+  height: 13px;
+}
+
+.gradient-content__title {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.gradient-content__box {
+  padding-top: 30px;
+}
+
+.gradient-content__box h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #24A3FF;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #24A3FF;
+}
+
+.gradient-content__box p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
 }
 
 .header {
