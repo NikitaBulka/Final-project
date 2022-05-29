@@ -13,31 +13,25 @@
     &__lang{
         display: flex;
         &-item{
-            font-weight: 700;
-            font-size: 12px;
-            line-height: 15px;
+            @include text (700, 12px, 15px, $basic);
             text-align: center;
             letter-spacing: 1px;
             text-decoration: none;
-            text-transform: uppercase;
-            color: #FFFFFF;
+            text-transform: uppercase;;
             padding: 5px 7px;
             border-radius: 8px;
             &:not(.header__lang-item--active):hover{
-                color: #ffff;
-                background-color: #F0145A;
+                color: $basic;
+                background-color: $accent;
             }
             &--active{
-                color: #ffff;
-                background-color: #F0145A;
+                color: $basic;
+                background-color: $accent;
             }
         }
     }
     &__phone{
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 20px;
-        color: #FFFFFF;
+        @include text (700, 16px, 20px, $basic);
         text-decoration: none;
     }
     &__adress,
@@ -53,20 +47,17 @@
         width: 69px;
     }
     &__page{
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 24px;
-        color: #FFFFFF;
-        display: flex;
+        @include text (400, 20px, 24px, $basic);
+        display: none;
         align-items: center;
-        // &::before{
-        //     content: '';
-        //     display: inline-block;
-        //     width: 13px;
-        //     height: 26px;
-        //     background-image: url('../../img/slash-verysmall.svg');
-        //     background-size: 13px 26px;
-        // }
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 26px;
+            background-image: url('../../img/slash-verysmall.svg');
+            background-size: 13px 26px;
+        }
     }
 
 }

@@ -1,5 +1,5 @@
 .gradient-content{
-    padding: 30px 15px 60px ;
+    padding: 0px 15px 60px ;
     &__block{
         width: 100%;
         display: grid;
@@ -9,13 +9,11 @@
     &__arrow{
         display: flex;
         align-items: center;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
+        padding-bottom: 10px;
+        @include text (700, 14px, 17px, $regular);
         letter-spacing: 1px;
         text-transform: uppercase;
         text-decoration: none;
-        color: $regular;
         &::after{
             content: '';
             display: inline-block;
@@ -25,27 +23,31 @@
         }
     }
     &__title{
+        @include text (700, 30px, 37px, transparent);
         @include red-text;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 37px;
     }
     &__box{
         padding-top: 30px;
         & h3{
-        @include text-h3;
+        @include text (700, 22px, 27px, $regular);
         padding-top: 30px;
         padding-bottom: 15px;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 27px;
-        color: $regular;
         }
 
         & p{
-        @include paragraph;
+            @include text (400, 16px, 26px, $basic);
         }
     }
+    &__icon{
+        display: inline-block;
+        background: $basic;
+        border-radius: 24px;
+        padding: 14px;
+        & img{
+            display: block;
+        }
+    }
+
 
     
 }

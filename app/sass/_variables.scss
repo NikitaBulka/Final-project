@@ -4,6 +4,8 @@ $regular:#24A3FF;
 $hover: #0085FF;
 $active:#006CCF;
 $basic: #ffffff;
+$grey-text: #B3B3BA;
+// $background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
 
 
 
@@ -19,16 +21,10 @@ $basic: #ffffff;
     background-clip: text;
     text-fill-color: transparent;
 }
-@mixin text-h3 {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 27px;
-    color: $regular;
+@mixin text ($font-w, $font-s, $line-h, $color) {
+    font-weight: $font-w;
+    font-size: $font-s;
+    line-height: $line-h;
+    color: $color;
     }
 
-@mixin paragraph {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    color: $basic;
-}
