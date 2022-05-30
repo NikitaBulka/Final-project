@@ -20,6 +20,9 @@ $grey-text: #B3B3BA;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
 }
 @mixin text ($font-w, $font-s, $line-h, $color) {
     font-weight: $font-w;

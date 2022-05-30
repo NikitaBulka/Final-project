@@ -1,0 +1,40 @@
+.main-content{
+    
+    padding-top: 50px;
+    &__slider{
+        margin: 0 15px;
+        // display: flex;
+        // flex-direction: column;
+        display: grid;
+        grid-template-columns: 315px;
+        grid-template-rows:  min-content min-content min-content;
+    }
+    &__pic{
+        & img {
+        height: 500px;
+        width:  100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 12px 12px 0px 0px;
+        }
+    
+    }
+    &__text{
+        padding: 30px;
+        
+    }
+    &__title{
+        @include red-text;
+        padding-top: 5px;
+        padding-bottom: 30px;
+    }
+    &__regular{
+        @include text (700, 16px, 20px, $grey-text);
+    }
+    &__small{
+        @include text (400, 14px, 22px, $grey-text);
+    }
+    
+}
+        
+    
