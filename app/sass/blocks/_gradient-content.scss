@@ -23,7 +23,6 @@
         }
     }
     &__title{
-        @include text (700, 30px, 37px, transparent);
         @include red-text;
     }
     &__box{
@@ -35,12 +34,12 @@
         }
 
         & p{
-            @include text (400, 16px, 26px, $basic);
+            @include text (400, 16px, 26px,  $basic-white);
         }
     }
     &__icon{
         display: inline-block;
-        background: $basic;
+        background:  $basic-white;
         border-radius: 24px;
         padding: 14px;
         & img{

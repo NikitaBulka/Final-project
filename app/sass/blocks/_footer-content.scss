@@ -1,0 +1,44 @@
+.footer{
+    &__box{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, min-content);
+        justify-items: center;
+        text-align: center;
+    }
+    &__adress{
+        @include text (400, 16px, 20px, $main-regular)
+        
+    }
+    &__map{
+        padding-top: 10px;
+        padding-bottom: 21px;
+        @include text (700, 12px, 15px, $regular);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    &__fb{
+        display: inline-block;
+        width: 39px;
+        height: 38px;
+        &:hover path{
+            fill:$accent;
+        }
+    }
+    &__phone{
+        margin: 10px 0;
+        @include text (700, 16px, 20px, $main-alt);
+        
+    }
+    &__email{
+        margin-bottom: 30px;
+        @include text (700, 16px, 20px, $regular);
+        &:hover{
+            color: $accent;
+        }
+    }
+    &__text{
+        @include text (400, 16px, 20px, $grey-text);
+        
+    }
+}

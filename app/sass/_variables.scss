@@ -3,9 +3,13 @@ $accent: #F0145A;
 $regular:#24A3FF;
 $hover: #0085FF;
 $active:#006CCF;
-$basic: #ffffff;
+$basic-white: #ffffff;
+$basic-black: #000000;
 $grey-text: #B3B3BA;
-// $background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+$main-regular:#323264;
+$main-alt:#46466E;
+$main-soft:#686887;
+
 
 
 
@@ -24,6 +28,16 @@ $grey-text: #B3B3BA;
     font-size: 30px;
     line-height: 37px;
 }
+@mixin red-text-revers {
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+}
 @mixin text ($font-w, $font-s, $line-h, $color) {
     font-weight: $font-w;
     font-size: $font-s;
@@ -31,3 +45,8 @@ $grey-text: #B3B3BA;
     color: $color;
     }
 
+@mixin item ($background) {
+    height: 120px;
+    background: $background;
+    margin: 0 -15px;
+}

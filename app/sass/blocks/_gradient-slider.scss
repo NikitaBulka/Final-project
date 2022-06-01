@@ -17,19 +17,23 @@
             border: none;
             padding: 0 ;
             margin-right: 30px;
-            &:first-child{
-                @include red-text;
-            }
+            
         }
     }
+
+    &__btn{
+        @include red-text-revers;
+        
+    }
+
     &__text{
         padding-top: 30px ;
         & h3{
-            @include text (700, 20px, 24px, $basic);
+            @include text (700, 20px, 24px,  $basic-white);
             padding-bottom: 30px
         }
         & p{
-            @include text (400, 19px, 30px, $basic);
+            @include text (400, 19px, 30px,  $basic-white);
         }
     }
 }

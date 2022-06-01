@@ -1,10 +1,7 @@
 .main-content{
-    
     padding-top: 50px;
     &__slider{
         margin: 0 15px;
-        // display: flex;
-        // flex-direction: column;
         display: grid;
         grid-template-columns: 315px;
         grid-template-rows:  min-content min-content min-content;
@@ -17,11 +14,9 @@
         display: block;
         border-radius: 12px 12px 0px 0px;
         }
-    
     }
     &__text{
         padding: 30px;
-        
     }
     &__title{
         @include red-text;
@@ -35,6 +30,161 @@
         @include text (400, 14px, 22px, $grey-text);
     }
     
+    &__btn{
+        justify-self: center;
+    }
+    &__circle{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 0;
+        background-color: rgba(36, 163, 255, 0.2);
+        &:hover:not(.main-content__circle--active){
+            background-color: rgba(36, 163, 255, 0.6);
+        }
+        &--active{
+            background-color: rgba(36, 163, 255, 1)
+        }
+        
+    }
+    &__circle:active{
+        background-color: rgba(36, 163, 255, 1)
+    }
+    
+    &__clients{
+        text-align: center;
+        padding-top: 60px;
+        & h2{
+            @include text(700, 14px, 17px, $main-regular);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding-bottom: 30px;
+        }
+    }
+    &__list--none{
+        display: none;
+    }
+    &__list-1{
+        @include item(#1C4280);
+        & img{
+            padding: 36px 79px  ;
+        }
+    }
+    &__list-2{
+        @include item(#143646);
+        & img{
+            padding: 44px 88px;
+        }
+    }
+    &__list-3{
+        @include item(transparent);
+        background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+        & img{
+            padding: 38px 98px;
+        }
+    }
+    &__list-4{
+        @include item( #9E4DC3);
+        & img{
+            padding: 39px 97px 39px 98px;
+        }
+    }
+    &__list-5{
+        @include item(#FD9339);
+        & img{
+            padding: 38px 100px 38px 101px;
+        }
+    }
+    &__list-6{
+        @include item(#E2E2E4);
+        & img{
+            padding: 36px 90px 36px 89px;
+        }
+    }
+    &__list-7{
+        @include item(#C71C36);
+        & img{
+            padding: 29px 59px 30px;
+        }
+    }
+    &__list-8{
+        @include item(#DCF3F9);
+        & img{
+            padding: 22px 55px ;
+        }
+    }
+    &__list-9{
+        @include item(#E2E2E4);
+        & img{
+            padding: 30px 37px ;
+        }
+    }
+    &__list-10{
+        @include item(#282240);
+        & img{
+            padding: 41px 37px 41px 38px;
+        }
+    }
+    &__list-11{
+        @include item(#1D4568);
+        & img{
+            padding: 37px 33px 37px 34px ;
+        }
+    }
+    &__list-12{
+        @include item( #000000);
+        & img{
+            padding: 13px 52px 12px;
+            display: block;
+        }
+    }
+    &__recommended {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3(1fr);
+        padding: 30px 15px 0;
+        & h2{
+            @include red-text;
+            padding-top: 5px;
+            padding-bottom: 30px;
+        }
+    }
+    &__arrow{
+        @include text (700, 14px, 17px, $regular);
+        display: flex;
+        align-items: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        &::after{
+            content: '';
+            display: inline-block;
+            background-image: url(../../img/arrow.svg);
+            width: 12px;
+            height: 13px;
+        }
+    }
+    &__item img{
+        border-radius: 8px 8px 0px 0px;
+        
+    }
+    &__box {
+        padding: 30px;
+        & h3{
+            @include text (700, 16px, 20px, $regular);
+            
+        }
+    }
+    &__date{
+        @include text (700, 12px, 15px, $grey-text);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding-top: 15px;
+        padding-bottom: 34px;
+    }
+    &__info{
+        @include text (400, 14px, 22px, $basic-black)
+    }
 }
         
     
