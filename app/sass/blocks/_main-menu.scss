@@ -29,7 +29,7 @@
             text-decoration: none;
             padding: 7px 0;
         }
-        & a:not(.accent):hover{
+        & a:hover{
             color:$hover;
         }
         & a:not(.accent):active{
@@ -37,7 +37,44 @@
         }
         & .accent{
         color:$accent;
-    }
+        }
     }
     
 }
+@media screen and (min-width: 768px){
+    .main-menu{
+        &__btn{
+        display: none;
+        }
+        &__list{
+            position: relative;
+            right: 0;
+            top: 0;
+            display: flex;
+            list-style: none;
+            padding: 12px;
+            text-align: center;
+            background: none;
+            border-radius: 0;
+            padding: 0;
+            & li{
+                margin-right: 15px;
+                padding: 0;
+                
+                &:not(:last-child){
+                    padding-bottom: 0;
+                }
+                & a{
+                    padding-bottom: 3px;
+                    @include text(700, 16px, 20px, $basic-white);
+                    &:hover{
+                        color: $basic-white;
+                        border-bottom: 2px solid $basic-white;
+                    }
+                }
+            }
+        }
+    }
+}
+    
+    
