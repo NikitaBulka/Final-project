@@ -22,6 +22,7 @@
         @include red-text;
         padding-top: 5px;
         padding-bottom: 30px;
+        
     }
     &__regular{
         @include text (700, 16px, 20px, $grey-text);
@@ -67,7 +68,7 @@
     &__list-1{
         @include item(#1C4280);
         & img{
-            padding: 36px 79px  ;
+            padding: 36px 79px ;
         }
     }
     &__list-2{
@@ -186,5 +187,47 @@
         @include text (400, 14px, 22px, $basic-black)
     }
 }
-        
+
+@media screen and (min-width: 768px){
+    .main-content{
+        padding-top: 80px;
+        &__slider{
+            margin: 0;
+            padding-right: 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:  min-content min-content min-content;
+        }
+        &__title{
+            font-size: 38px;
+            line-height: 46px;
+        }
+        &__text{
+            padding-bottom: 60px;
+        }
+        &__clients{
+            text-align: center;
+            padding-top: 60px;
+        }
+        &__grid{
+            display: grid;
+            grid-template-columns: repeat(3,256px);
+            grid-template-rows:  repeat(4,120px);
+        }
+        &__list--none{
+            display: block;
+            
+        }
+        &__list-1{
+            width: 256px;
+            height: 120px;
+            margin: 0;
+            & img{
+                padding: 0;
+                padding-top: 36px;
+                padding-right: 20px;
+            }
+        }
+    }
     
+}

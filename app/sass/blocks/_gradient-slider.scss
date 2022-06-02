@@ -7,6 +7,7 @@
         overflow: -mon-scrollbars-none;
         -ms-overflow-style: none;
         border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+        
         &::-webkit-scrollbar{
             width: 0;
         }
@@ -31,6 +32,7 @@
         & h3{
             @include text (700, 20px, 24px,  $basic-white);
             padding-bottom: 30px
+            
         }
         & p{
             @include text (400, 19px, 30px,  $basic-white);
@@ -39,12 +41,22 @@
 }
 @media screen and (min-width: 768px){
     .gradient-slider{
+        padding: 60px 30px 60px 0;
         & button{
             white-space: nowrap;
             font-size: 38px;
             line-height: 46px;
             margin-right: 30px;
             
+        }
+        &__text{
+            padding-right: 15px ;
+            padding-top: 60px;
+            & h3{
+                @include text (700, 30px, 37px,  $basic-white);
+                padding-bottom: 30px
+                
+            }
         }
     }
 }

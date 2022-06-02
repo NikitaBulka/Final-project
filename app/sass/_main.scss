@@ -13,8 +13,8 @@
 .container{
     max-width: 1230px;
     min-width: 375px;
-    padding: 0 15px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .visually-hidden {
@@ -42,5 +42,9 @@
 @media screen and (min-width: 768px){
     .container{
         padding-left: 60px;
+        &--clients{
+            max-width:768px;
+            padding-left: 15px;
+        }
     }
 }

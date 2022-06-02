@@ -28,16 +28,18 @@
             color: #24A3FF;
             text-decoration: none;
             padding: 7px 0;
+           
         }
         & a:hover{
             color:$hover;
         }
-        & a:not(.accent):active{
+        & a:active{
             color:$active;
         }
         & .accent{
-        color:$accent;
+            color:$accent;
         }
+        
     }
     
 }
@@ -65,14 +67,19 @@
                     padding-bottom: 0;
                 }
                 & a{
-                    padding-bottom: 3px;
-                    @include text(700, 16px, 20px, $basic-white);
+                padding-bottom: 3px;
+                @include text(700, 16px, 20px, $basic-white);
                     &:hover{
-                        color: $basic-white;
-                        border-bottom: 2px solid $basic-white;
+                    color: $basic-white;
+                    border-bottom: 2px solid $basic-white;
                     }
+                    
                 }
-            }
+                & a:active{
+                        color:$accent;
+                        border-bottom: 2px solid $accent;
+                }
+            }   
         }
     }
 }

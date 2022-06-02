@@ -1,10 +1,9 @@
 .gradient-content{
     padding: 0px 15px 60px ;
     &__block{
-        width: 100%;
         display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 6(16.6%);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, min-content);
     }
     &__arrow{
         display: flex;
@@ -48,5 +47,37 @@
     }
 
 
+    
+}
+
+@media screen and (min-width: 768px){
+    .gradient-content{
+        padding-left: 0;
+        padding-right: 30px;
+        &__title{
+            font-size: 38px;
+            line-height: 46px;
+        }
+        &__block{
+            display: grid;
+            grid-template-columns: 1fr  1fr;
+            grid-template-rows: repeat(3, min-content);
+            gap: 60px;
+            padding-top: 60px;
+            padding-right: 15px;
+        }
+        &__box{
+            padding-top: 0;
+            & h3{
+            @include text (700, 22px, 27px, $regular);
+            padding-top: 30px;
+            padding-bottom: 15px;
+            }
+    
+            & p{
+                @include text (400, 16px, 26px,  $basic-white);
+            }
+        }
+    }
     
 }
