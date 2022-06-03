@@ -4,7 +4,8 @@
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, min-content);
         justify-items: center;
-        text-align: center;
+        padding-top: 62px;
+        padding-bottom: 30px;
     }
     &__adress{
         @include text (400, 16px, 20px, $main-regular)
@@ -40,5 +41,41 @@
     &__text{
         @include text (400, 16px, 20px, $grey-text);
         
+    }
+}
+@media screen and (min-width: 768px){
+    .footer{
+        &__box{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(2, min-content);
+            justify-items: flex-start;
+            align-items: center;
+            padding-top: 62px;
+            padding-bottom: 30px;
+        }
+        &__adress{
+
+            grid-column: span 2;
+        }
+        &__map{
+            padding: 0;
+        }
+        &__fb{
+            width: 38px;
+        }
+        &__phone{
+            margin: 0;
+        }
+        &__email{
+            margin: 0;
+            grid-column: span 2;
+        }
+        &__text{
+            grid-column-start: 4;
+            grid-column-end: -1;
+            grid-row-start:1;
+            grid-row-end: 2;
+        }
     }
 }

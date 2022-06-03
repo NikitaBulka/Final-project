@@ -67,88 +67,152 @@
     }
     &__list-1{
         @include item(#1C4280);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 36px 79px ;
+            padding: 0;
+            width: 217px;
+            height: 48px;
         }
     }
     &__list-2{
         @include item(#143646);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 44px 88px;
+            padding: 0;
+            width: 199px;
+            height: 32px;
         }
     }
     &__list-3{
         @include item(transparent);
         background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 38px 98px;
+            padding: 0;
+            width: 179px;
+            height: 44px;
         }
     }
     &__list-4{
         @include item( #9E4DC3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 39px 97px 39px 98px;
+            padding: 0;
+            width: 180px;
+            height: 42px;
         }
     }
     &__list-5{
         @include item(#FD9339);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 38px 100px 38px 101px;
+            padding: 0;
+            width: 174px;
+            height: 44px;
         }
     }
     &__list-6{
         @include item(#E2E2E4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 36px 90px 36px 89px;
+            padding: 0;
+            width: 194px;
+            height: 48px;
         }
     }
     &__list-7{
         @include item(#C71C36);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 29px 59px 30px;
+            padding: 0;
+            width: 138px;
+            height: 61px;
         }
     }
     &__list-8{
         @include item(#DCF3F9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 22px 55px ;
+            padding: 0;
+            width: 146px;
+            height: 76px;
         }
     }
     &__list-9{
         @include item(#E2E2E4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 30px 37px ;
+            padding: 0;
+            width: 182px;
+            height: 60px;
         }
     }
     &__list-10{
         @include item(#282240);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 41px 37px 41px 38px;
+            padding: 0;
+            width: 181px;
+            height: 38px;
         }
     }
     &__list-11{
         @include item(#1D4568);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 37px 33px 37px 34px ;
+            padding: 0;
+            width: 189px;
+            height: 46px;
         }
     }
     &__list-12{
         @include item( #000000);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & img{
-            padding: 13px 52px 12px;
-            display: block;
+            padding: 0;
+            width: 152px;
+            height: 95px;
         }
     }
+    &__list--none{
+        display: none;
+    }
     &__recommended {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 3(1fr);
-        padding: 30px 15px 0;
+        padding-top: 30px;
         & h2{
             @include red-text;
             padding-top: 5px;
             padding-bottom: 30px;
         }
+    }
+    &__block{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
     }
     &__arrow{
         @include text (700, 14px, 17px, $regular);
@@ -167,6 +231,9 @@
     }
     &__item img{
         border-radius: 8px 8px 0px 0px;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
         
     }
     &__box {
@@ -215,19 +282,33 @@
             grid-template-rows:  repeat(4,120px);
         }
         &__list--none{
-            display: block;
+            display: flex   ;
             
         }
         &__list-1{
             width: 256px;
             height: 120px;
             margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             & img{
                 padding: 0;
-                padding-top: 36px;
-                padding-right: 20px;
+                width: 217px;
+                height: 48px;
             }
         }
+        &__block{
+            display: grid;
+            grid-template-columns: 309px 309px;
+            grid-template-rows: repeat(2, min-content);
+            gap: 30px;
+        }
+       &__item{
+           &--span{
+            grid-column: span 2;
+           }
+       }
     }
     
 }
