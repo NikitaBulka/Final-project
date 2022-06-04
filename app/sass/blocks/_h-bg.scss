@@ -15,6 +15,8 @@
         line-height: 46px;
         text-align: center;
         color: #FFFFFF;
+        padding-top: 129px;
+        padding-bottom: 159px;
         }
         & a{
             width: 42px;
@@ -33,13 +35,25 @@
     .h-bg{
         background-image: url(../../img/symbol-tabl.png);
         background-repeat: no-repeat;
-        height:1024px;
+        height: 1024px;
         &__content{
-            height: 505px;
             & h1{
-                
+                padding-top: 269px;
+                padding-bottom: 417px;
             }
         }
     }
-    
+}
+@media screen and (min-width: 1024px){
+    .h-bg{
+        background-image: url(../../img/symbol-lab.png);
+        background-position: center top;
+        height: 768px;
+        &__content{
+            & h1{
+                padding-top: 245px;
+                padding-bottom: 289px;
+            }
+        }
+    }
 }

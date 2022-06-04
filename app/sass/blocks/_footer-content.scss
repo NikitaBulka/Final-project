@@ -1,11 +1,11 @@
 .footer{
     &__box{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, min-content);
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding-top: 62px;
         padding-bottom: 30px;
+        
     }
     &__adress{
         @include text (400, 16px, 20px, $main-regular)
@@ -19,7 +19,6 @@
         text-transform: uppercase;
     }
     &__fb{
-        display: inline-block;
         width: 39px;
         height: 38px;
         &:hover path{
@@ -45,37 +44,89 @@
 }
 @media screen and (min-width: 768px){
     .footer{
+        
         &__box{
+            // display: flex;
+            // flex-direction: row;
+            // flex-wrap: wrap;
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(2, min-content);
-            justify-items: flex-start;
-            align-items: center;
+            grid-template-columns: 39px  max-content min-content 1fr 1fr 1fr;
+            grid-template-rows: min-content min-content;
             padding-top: 62px;
             padding-bottom: 30px;
+            
         }
         &__adress{
-
+            order: -3;
             grid-column: span 2;
+            // flex-basis: content;
         }
         &__map{
+            display: flex;
+            align-items: center;
+            order: -2;
+            // flex-basis: content;
             padding: 0;
+            // margin-right: auto;
+            &::before{
+                content: '';
+                display: block;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #B3B3BA;
+                margin: 0 10px;
+            }
         }
         &__fb{
             width: 38px;
         }
         &__phone{
+            grid-column: span 2;
             margin: 0;
+            display: flex;
+            align-items: center;
+            &::before{
+                content: '';
+                display: block;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #B3B3BA;
+                margin: 0 10px;
+            }
         }
         &__email{
+            grid-column-start: 4;
             margin: 0;
-            grid-column: span 2;
+            display: flex;
+            align-items: center;
+            &::before{
+                content: '';
+                display: block;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #B3B3BA;
+                margin: 0 10px;
+            }
+            
+        }
+        &__fb,
+        &__phone,
+        &__email{
+            margin-top: 21px;
         }
         &__text{
-            grid-column-start: 4;
-            grid-column-end: -1;
-            grid-row-start:1;
-            grid-row-end: 2;
+            grid-column: span 2;
+            order: -1;
+            // flex-basis: 51%;
+            // text-align: right;
+
+
+
+
+            
         }
     }
 }

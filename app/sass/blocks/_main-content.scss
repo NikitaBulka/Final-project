@@ -55,6 +55,7 @@
     &__clients{
         text-align: center;
         padding-top: 60px;
+        margin: 0 -15px;
         & h2{
             @include text(700, 14px, 17px, $main-regular);
             letter-spacing: 1px;
@@ -260,7 +261,7 @@
         padding-top: 80px;
         &__slider{
             margin: 0;
-            padding-right: 30px;
+            
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows:  min-content min-content min-content;
@@ -273,8 +274,7 @@
             padding-bottom: 60px;
         }
         &__clients{
-            text-align: center;
-            padding-top: 60px;
+            margin: 0;
         }
         &__grid{
             display: grid;
@@ -297,6 +297,12 @@
                 width: 217px;
                 height: 48px;
             }
+        }
+        &__recommended {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 648px;
         }
         &__block{
             display: grid;

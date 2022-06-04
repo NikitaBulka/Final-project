@@ -8,6 +8,7 @@
     font-family: 'Montserrat', 'Times New Roman', sans-serif;
 	font-style: normal;
 	font-weight: 400 ;
+    background: #F5F5FA;
 }
 
 .container{
@@ -41,7 +42,7 @@
 // }
 @media screen and (min-width: 768px){
     .container{
-        padding-left: 60px;
+        padding: 0 60px;
         &--clients{
             max-width:768px;
             padding: 0;
