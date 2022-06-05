@@ -14,8 +14,8 @@
                 <header class="header">
                     <div class="header__top">
                         <div class="header__lang">
-                            <a class="header__lang-item" href="#">en</a>
-                            <a class="header__lang-item header__lang-item--active" href="#">ua</a>
+                            <a class="header__lang-item header__lang-item--active" href="#">en</a>
+                            <a class="header__lang-item" href="#">ua</a>
                             <a class="header__lang-item" href="#">plc</a>
                         </div>
                         <div class="header__adress">Kyiv, Mechnikova str., 14/1</div>
@@ -48,7 +48,7 @@
                 </header>
                 <div class="h-bg__content">
                     <h1>you legal solutions provider</h1>
-                    <a id="scroll" href="#">
+                    <a href="#scroll">
                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle opacity="0.5" cx="21" cy="21" r="20" stroke="white" stroke-width="2"/>
                         <path d="M12 18L21 27L30 18" stroke="white" stroke-width="2"/>
@@ -58,15 +58,15 @@
             </div>  
         </div>
         <div class="container">
-            <section class="gradient-slider">
+            <section  class="gradient-slider">
                 <h2 class="visually-hidden">Slider</h2>
-                <div class="gradient-slider__block">
+                <div id="scroll" class="gradient-slider__block">
                         <article class="gradient-slider__box" >
                             <h3 class="visually-hidden">Buttons</h3>
-                            <button class="gradient-slider__btn" type="button">Consistent</button>
-                            <button type="button">Customer oriented</button>
-                            <button type="button">Innovative</button>
-                            <button type="button">Business oriented</button>
+                            <button class="gradient-slider__btn gradient-slider__btn--active" type="button">Consistent</button>
+                            <button  class="gradient-slider__btn" type="button">Customer oriented</button>
+                            <button  class="gradient-slider__btn" type="button">Innovative</button>
+                            <button  class="gradient-slider__btn" type="button">Business oriented</button>
                     </article>
                 </div>
                 <article class="gradient-slider__text">
@@ -129,12 +129,12 @@
             <section class="main-content__slider">
                 <h2 class="visually-hidden">Slider</h2>
                 <article class="main-content__pic">
-                    <h4 class="visually-hidden">pic</h4>
+                    <h4 class="visually-hidden">Pic</h4>
                     <img src="./img/man.png" alt="Managing partner">
                 </article>
                 <article class="main-content__text">
                     <h4 class="visually-hidden" >text</h4>
-                    <a class="gradient-content__arrow" href="#">команда</a>
+                    <a class="main-content__arrow" href="#">команда</a>
                     <p class="main-content__title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</p>
                     <p class="main-content__regular">Олександр Олександровський</p>
                     <p class="main-content__small">Керуючий партнер</p>
@@ -168,22 +168,22 @@
                         <article class="main-content__list-6">
                             <img  src="./img/adtelligent.svg" alt="adtelligent">
                         </article>
-                        <article class="main-content__list-7 main-content__list--none">
+                        <article class="main-content__list-7 main-content__list">
                             <img  src="./img/clickky.png" alt="clickky">
                         </article>
-                        <article class="main-content__list-8 main-content__list--none">
+                        <article class="main-content__list-8 main-content__list">
                             <img  src="./img/ecolease.png" alt="ecolease">
                         </article>
-                        <article class="main-content__list-9 main-content__list--none">
+                        <article class="main-content__list-9 main-content__list">
                             <img  src="./img/infra.png" alt="infra">
                         </article>
-                        <article class="main-content__list-10 main-content__list--none">
+                        <article class="main-content__list-10 main-content__list">
                             <img  src="./img/park.png" alt="park">
                         </article>
-                        <article class="main-content__list-11 main-content__list--none">
+                        <article class="main-content__list-11 main-content__list">
                             <img  src="./img/art-print.png" alt="art-print">
                         </article>
-                        <article class="main-content__list-12 main-content__list--none">
+                        <article class="main-content__list-12 main-content__list">
                             <img  src="./img/card.png" alt="card">
                         </article>
                     </div>
@@ -228,15 +228,19 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__box">
+                <div class="footer__top">
                     <p class="footer__adress">Kyiv, Mechnikova str., 14/1</p>
                     <a class="footer__map" href="https://goo.gl/maps/Xwf3hfzKMAg9PKE67" target="_blank" >On map</a>
+                </div>
+                <div class="footer__mid">
                     <a class="footer__fb" href="#">
                         <svg width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M38.5 19.1161C38.5 8.55857 29.9934 0 19.5 0C9.00658 0 0.5 8.55857 0.5 19.1161C0.5 28.6575 7.44803 36.5659 16.5312 38V24.6419H11.707V19.1161H16.5312V14.9046C16.5312 10.1136 19.3678 7.46723 23.7078 7.46723C25.7866 7.46723 27.9609 7.84059 27.9609 7.84059V12.545H25.5651C23.2048 12.545 22.4688 14.0185 22.4688 15.5302V19.1161H27.7383L26.8959 24.6419H22.4688V38C31.552 36.5659 38.5 28.6575 38.5 19.1161Z" fill="#24A3FF"/>
                         </svg>
                     </a>
                     <a class="footer__phone" href="tel:0800211927">0800 211 927</a>
-                    <a class="footer__email" href="mailto:contact@forstudy.space">contact@forstudy.space</a>             
+                    <a class="footer__email" href="mailto:contact@forstudy.space">contact@forstudy.space</a>  
+                </div>
                     <p class="footer__text">© 2021 HLEGAL Law company, LLC</p>
             </div>
         </div>

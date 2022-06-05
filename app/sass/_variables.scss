@@ -4,6 +4,7 @@ $regular:#24A3FF;
 $hover: #0085FF;
 $active:#006CCF;
 $basic-white: #ffffff;
+$opasity-white: rgba(255, 255, 255, 0.2);
 $basic-black: #000000;
 $grey-text: #B3B3BA;
 $main-regular:#323264;
@@ -37,6 +38,13 @@ $main-soft:#686887;
     font-weight: 700;
     font-size: 30px;
     line-height: 37px;
+}
+@mixin red {
+    background: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 @mixin text ($font-w, $font-s, $line-h, $color) {
     font-weight: $font-w;

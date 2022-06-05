@@ -24,11 +24,15 @@
             padding: 5px 7px;
             border-radius: 8px;
             &:not(.header__lang-item--active):hover{
-                color:  $basic-white;
+                color:$basic-white;
+                background-color: $opasity-white;
+            }
+            &:not(.header__lang-item--active):active{
+                color:$basic-white;
                 background-color: $accent;
             }
             &--active{
-                color:  $basic-white;
+                color: $basic-white;
                 background-color: $accent;
             }
         }
@@ -79,7 +83,7 @@
 }
 @media screen and (min-width: 768px){
     .header{
-        grid-template-columns: 1fr  ;
+        grid-template-columns: 1fr;
         grid-template-rows: min-content min-content min-content;
         padding-top: 50px;
         &__top{

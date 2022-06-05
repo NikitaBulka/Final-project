@@ -1,12 +1,13 @@
 .main-content{
     padding-top: 50px;
     &__slider{
-        margin: 0 15px;
         display: grid;
-        grid-template-columns: 315px;
+        grid-template-columns: 1fr;
         grid-template-rows:  min-content min-content min-content;
+        gap: 30px;
     }
     &__pic{
+        padding: 0 15px;
         & img {
         height: 500px;
         width:  100%;
@@ -16,7 +17,9 @@
         }
     }
     &__text{
-        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px 30px 45px;
     }
     &__title{
         @include red-text;
@@ -26,6 +29,7 @@
     }
     &__regular{
         @include text (700, 16px, 20px, $grey-text);
+        padding-bottom: 6px;
     }
     &__small{
         @include text (400, 14px, 22px, $grey-text);
@@ -199,7 +203,7 @@
             height: 95px;
         }
     }
-    &__list--none{
+    &__list{
         display: none;
     }
     &__recommended {
@@ -216,6 +220,7 @@
         grid-template-rows: repeat(3, min-content);
     }
     &__arrow{
+        align-self: flex-start;
         @include text (700, 14px, 17px, $regular);
         display: flex;
         align-items: center;
@@ -225,9 +230,20 @@
         &::after{
             content: '';
             display: inline-block;
-            background-image: url(../../img/arrow.svg);
-            width: 12px;
-            height: 13px;
+            border: 3px solid $regular;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+        &:hover{
+            color: $accent;
+        }
+        &:hover::after{
+            border: 3px solid $accent;
+            border-left: 0;
+            border-top: 0;
         }
     }
     &__item img{
@@ -261,7 +277,6 @@
         padding-top: 80px;
         &__slider{
             margin: 0;
-            
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows:  min-content min-content min-content;
@@ -271,50 +286,80 @@
             line-height: 46px;
         }
         &__text{
-            padding-bottom: 60px;
+            padding-bottom: 30px;
         }
         &__clients{
             margin: 0;
         }
         &__grid{
             display: grid;
-            grid-template-columns: repeat(3,256px);
-            grid-template-rows:  repeat(4,120px);
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 120px);;
         }
         &__list--none{
             display: flex   ;
             
         }
-        &__list-1{
-            width: 256px;
-            height: 120px;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            & img{
-                padding: 0;
-                width: 217px;
-                height: 48px;
-            }
-        }
+        
         &__recommended {
             display: flex;
             flex-direction: column;
-            margin: 0 auto;
-            width: 648px;
+            justify-content: center;
+            
         }
         &__block{
             display: grid;
-            grid-template-columns: 309px 309px;
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, min-content);
             gap: 30px;
         }
-       &__item{
+        &__item{
            &--span{
             grid-column: span 2;
            }
-       }
+        }
     }
-    
+}
+@media screen and (min-width: 1024px){
+    .main-content{
+        &__slider{
+            margin: 0;
+            display: grid;
+            grid-template-columns:  min-content 1fr;
+            grid-template-rows:  min-content min-content ;
+        }
+        &__pic{
+            & img {
+            height: 100%;
+            width:  400px;
+            border-radius: 12px 0px 0px 12px;
+            }
+        }
+        &__btn{
+            grid-column: span 2;
+        }
+        &__grid{
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 120px);
+        }
+        &__block{
+            grid-template-columns: repeat(3, 1fr);
+            
+            grid-template-rows:  min-content;
+        }
+        &__item{
+            &--span{
+             grid-column: span 1;
+            }
+         }
+    }
+}
+@media screen and (min-width: 1440px){
+    .main-content{
+        &__slider{
+            display: grid;
+            grid-template-columns:  min-content 1fr;
+            grid-template-rows:  344px;
+        }
+    }
 }

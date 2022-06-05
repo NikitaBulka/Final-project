@@ -1,22 +1,36 @@
 .footer{
     &__box{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+        align-items: center;
+        justify-items: center;
+        padding-top: 62px;
+        padding-bottom: 30px;
+    }
+    &__top{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 62px;
+    }
+    &__mid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 21px;
         padding-bottom: 30px;
-        
     }
     &__adress{
         @include text (400, 16px, 20px, $main-regular)
-        
     }
     &__map{
         padding-top: 10px;
-        padding-bottom: 21px;
         @include text (700, 12px, 15px, $regular);
         letter-spacing: 1px;
         text-transform: uppercase;
+        &:hover{
+            color: $accent;
+        }
     }
     &__fb{
         width: 39px;
@@ -28,10 +42,8 @@
     &__phone{
         margin: 10px 0;
         @include text (700, 16px, 20px, $main-alt);
-        
     }
     &__email{
-        margin-bottom: 30px;
         @include text (700, 16px, 20px, $regular);
         &:hover{
             color: $accent;
@@ -39,35 +51,44 @@
     }
     &__text{
         @include text (400, 16px, 20px, $grey-text);
-        
     }
 }
 @media screen and (min-width: 768px){
     .footer{
-        
         &__box{
             // display: flex;
             // flex-direction: row;
             // flex-wrap: wrap;
             display: grid;
-            grid-template-columns: 39px  max-content min-content 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             grid-template-rows: min-content min-content;
             padding-top: 62px;
             padding-bottom: 30px;
-            
         }
-        &__adress{
-            order: -3;
+        &__top{
+            grid-column-start: 1;
+            grid-row-start: 1;
+            justify-self: flex-start;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+        &__mid{
+            grid-column-start: 1;
+            grid-row-start: 2;
             grid-column: span 2;
-            // flex-basis: content;
+            justify-self: flex-start;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-top: 21px;
+            padding-bottom: 30px;
         }
         &__map{
             display: flex;
             align-items: center;
             order: -2;
-            // flex-basis: content;
             padding: 0;
-            // margin-right: auto;
             &::before{
                 content: '';
                 display: block;
@@ -77,13 +98,8 @@
                 background: #B3B3BA;
                 margin: 0 10px;
             }
-        }
-        &__fb{
-            width: 38px;
         }
         &__phone{
-            grid-column: span 2;
-            margin: 0;
             display: flex;
             align-items: center;
             &::before{
@@ -97,8 +113,6 @@
             }
         }
         &__email{
-            grid-column-start: 4;
-            margin: 0;
             display: flex;
             align-items: center;
             &::before{
@@ -110,23 +124,9 @@
                 background: #B3B3BA;
                 margin: 0 10px;
             }
-            
-        }
-        &__fb,
-        &__phone,
-        &__email{
-            margin-top: 21px;
         }
         &__text{
-            grid-column: span 2;
-            order: -1;
-            // flex-basis: 51%;
-            // text-align: right;
-
-
-
-
-            
+            justify-self: flex-end;
         }
     }
 }

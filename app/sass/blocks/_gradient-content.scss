@@ -1,4 +1,6 @@
 .gradient-content{
+    display: flex;
+    flex-direction: column;
     padding: 0px 15px 60px ;
     &__block{
         display: grid;
@@ -6,9 +8,11 @@
         grid-template-rows: repeat(6, min-content);
     }
     &__arrow{
+        align-self: flex-start;
         display: flex;
         align-items: center;
-        padding-bottom: 10px;
+        justify-items: flex-start;
+        margin-bottom: 10px;
         @include text (700, 14px, 17px, $regular);
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -16,9 +20,20 @@
         &::after{
             content: '';
             display: inline-block;
-            background-image: url(../../img/arrow.svg);
-            width: 12px;
-            height: 13px;
+            border: 3px solid $regular;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+        &:hover{
+            color: $accent;
+        }
+        &:hover::after{
+            border: 3px solid $accent;
+            border-left: 0;
+            border-top: 0;
         }
     }
     &__title{
@@ -45,9 +60,6 @@
             display: block;
         }
     }
-
-
-    
 }
 
 @media screen and (min-width: 768px){
@@ -64,7 +76,6 @@
             grid-template-rows: repeat(3, min-content);
             gap: 60px;
             padding-top: 60px;
-            
         }
         &__box{
             padding-top: 0;
@@ -73,11 +84,18 @@
             padding-top: 30px;
             padding-bottom: 15px;
             }
-    
             & p{
                 @include text (400, 16px, 26px,  $basic-white);
             }
         }
     }
-    
+}
+@media screen and (min-width: 1024px){
+    .gradient-content{
+        &__block{
+            display: grid;
+            grid-template-columns: 1fr  1fr 1fr;
+            grid-template-rows: repeat(2, min-content);
+        }
+    }
 }
