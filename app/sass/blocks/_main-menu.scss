@@ -6,6 +6,9 @@
         border: 0;
         background-color: transparent;
         cursor: pointer;
+        &--white{
+            background-image: url(../../img/hamburger.png);
+        }
     }
     &__list{
         position: absolute;

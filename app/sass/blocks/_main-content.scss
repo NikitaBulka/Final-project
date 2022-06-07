@@ -296,16 +296,13 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(4, 120px);;
         }
-        &__list--none{
-            display: flex   ;
-            
+        &__list{
+            display: flex;
         }
-        
         &__recommended {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            
         }
         &__block{
             display: grid;
@@ -344,7 +341,6 @@
         }
         &__block{
             grid-template-columns: repeat(3, 1fr);
-            
             grid-template-rows:  min-content;
         }
         &__item{

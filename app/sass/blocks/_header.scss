@@ -3,7 +3,6 @@
     grid-template-columns: 1fr min-content;
     grid-template-rows: min-content min-content;
     align-items: center;
-    // padding-bottom: 129px;
     &__top{
         grid-column: span 2;
         display: flex;
@@ -36,12 +35,22 @@
                 background-color: $accent;
             }
         }
+        &--white a:not(.header__lang-item--active){
+            color: $grey-text;
+            &:not(.header__lang-item--active):hover{
+                color: $basic-white;
+                background-color: $accent;
+            }
+        }
     }
     &__phone{
         @include text (700, 16px, 20px,  $basic-white);
         text-decoration: none;
         &:hover{
             color: $accent
+        }
+        &--white{
+            color: $grey-text;
         }
     }
     &__adress {
@@ -60,23 +69,22 @@
     }
     &__logos{
         display: flex;
-        align-items: flex-start;
+        align-items: center;
     }
     &__logo{
         padding-top: 15px;
         width: 69px;
     }
     &__page{
-        @include text (400, 20px, 24px, $basic-white);
-        display: none;
+        display: flex;
         align-items: center;
+        @include text (400, 20px, 24px, $main-regular);
         &::before{
             content: '';
             display: inline-block;
-            width: 13px;
-            height: 26px;
             background-image: url('../../img/slash-verysmall.svg');
-            background-size: 13px 26px;
+            width: 12px;
+            height: 26px;
         }
     }
 

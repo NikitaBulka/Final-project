@@ -1,0 +1,28 @@
+.main-white{
+    padding-top: 30px;
+    &__intro{
+        padding: 0 15px;
+        & h2{
+            @include red-text;
+        }
+    }
+    &__text{
+        & p{
+            @include text( 400, 19px, 30px, $basic-black)
+        }
+    }
+    &__padding{
+            padding-bottom: 30px;
+        }
+    &__item{
+        padding: 0 30px;
+        & p:first-child{
+            @include red-text;
+            font-size: 36px;
+            line-height: 44px;
+        }
+        & p:last-child{
+            @include text(400, 16px, 20px, $main-regular);
+        }
+    }
+}
