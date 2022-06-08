@@ -1,12 +1,11 @@
 .main-white{
-    padding-top: 30px;
     &__intro{
-        padding: 0 15px;
-        & h2{
-            @include red-text;
-        }
+        padding: 30px 15px;
     }
     &__text{
+        & h4{
+            @include red-text;
+        }
         & p{
             @include text( 400, 19px, 30px, $basic-black)
         }
@@ -14,8 +13,15 @@
     &__padding{
             padding-bottom: 30px;
         }
+    &__info{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+        gap: 40px;
+        padding-top: 30px;
+        padding-left: 30px;
+    }
     &__item{
-        padding: 0 30px;
         & p:first-child{
             @include red-text;
             font-size: 36px;
@@ -23,6 +29,85 @@
         }
         & p:last-child{
             @include text(400, 16px, 20px, $main-regular);
+        }
+    }
+    &__num-1{
+        display: flex;
+        align-items: center;
+        &::before{
+            content: '';
+            display: block;
+            padding-right: 8px;
+            width:32px;
+            height:32px;
+            background-image: url(../../img/flag.svg);
+            background-repeat: no-repeat;
+        }
+    }
+    &__num-2{
+        display: flex;
+        align-items: center;
+        &::before{
+            content: '';
+            display: block;
+            padding-right: 8px;
+            width:32px;
+            height:32px;
+            background-image: url(../../img/case.svg);
+            background-repeat: no-repeat;
+        }
+    }
+    &__num-3{
+        display: flex;
+        align-items: center;
+        &::before{
+            content: '';
+            display: block;
+            padding-right: 8px;
+            width:32px;
+            height:32px;
+            background-image: url(../../img/star.svg);
+            background-repeat: no-repeat;
+        }
+    }
+    &__box{
+        padding: 30px 15px 60px ;
+        & p{
+            @include text( 400, 19px, 30px, $basic-black)
+        }
+        & p:last-child{
+            @include red-text;
+        }
+        & p:not(:last-child){
+            padding-bottom: 30px;
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    .main-white{
+        &__intro{
+        padding: 60px 0;
+        }
+        &__box{
+            padding-right: 0;
+            padding-left: 0;
+            & p:last-child{
+                @include red-text;
+                font-size: 38px;
+                line-height: 46px;
+            }
+        }
+    }  
+}
+@media screen and (min-width: 1024px){
+    .main-white{
+        &__intro{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+        &__info{
+            padding-top: 0;
         }
     }
 }

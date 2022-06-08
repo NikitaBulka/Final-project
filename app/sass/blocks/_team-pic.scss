@@ -1,0 +1,17 @@
+.team-pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -15px;
+    width: 375px;
+    height: 114px;
+    background-image: url(../../img/team-mob.png);
+    background-size: cover;
+    & p{
+        @include text(700, 36px, 44px, $basic-white);
+        letter-spacing: 13px;
+        text-transform: uppercase;
+        opacity: 0.8;
+        text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+    }
+}

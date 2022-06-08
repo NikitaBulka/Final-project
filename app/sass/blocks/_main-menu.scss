@@ -24,25 +24,25 @@
         & li:not(:last-child){
             padding-bottom: 15px;
         }
-        & a{
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 29px;
-            color: #24A3FF;
-            text-decoration: none;
-            padding: 7px 0;
-           
-        }
-        & a:hover{
+    }
+
+    &__item{
+        @include text(700, 24px, 29px, $regular);
+        text-decoration: none;
+        padding: 7px 0;
+        &:not(.main-menu__item--accent):hover{
             color:$hover;
         }
-        & a:active{
+        &:not(.main-menu__item--accent):active{
             color:$active;
         }
-        & .accent{
+        &--accent{
             color:$accent;
         }
-        
+        &--active{
+            color:$accent;
+            border-bottom: 2px solid $accent;
+        }
     }
     
 }
@@ -69,21 +69,31 @@
                 &:not(:last-child){
                     padding-bottom: 0;
                 }
-                & a{
-                    padding: 0;
-                    padding-bottom: 3px;
-                    @include text(700, 16px, 20px, $basic-white);
-                    &:hover{
-                    color: $basic-white;
-                    border-bottom: 2px solid $basic-white;
-                    }
-                    
+            }
+        }
+        &__item{
+            padding: 0;
+            padding-bottom: 3px;
+            @include text(700, 16px, 20px, $basic-white);
+            &:not(.main-menu__item--accent):hover{
+                color: $basic-white;
+                border-bottom: 2px solid $basic-white;
+            }
+            &:not(.main-menu__item--accent):active{
+                color:$accent;
+                border-bottom: 2px solid $accent;
+            }
+            &--white{
+                @include text(700, 16px, 20px, $regular);
+                &:not(.main-menu__item--accent):hover{
+                    color: $regular;
+                    border-bottom: 2px solid $regular;
                 }
-                & a:active{
-                        color:$accent;
-                        border-bottom: 2px solid $accent;
-                }
-            }   
+            }
+            &--accent{
+                color:$accent;
+                border-bottom: 2px solid $accent;
+            }
         }
     }
 }

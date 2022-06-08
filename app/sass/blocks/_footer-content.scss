@@ -56,9 +56,6 @@
 @media screen and (min-width: 768px){
     .footer{
         &__box{
-            // display: flex;
-            // flex-direction: row;
-            // flex-wrap: wrap;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: min-content min-content;
