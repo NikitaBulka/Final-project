@@ -25,7 +25,6 @@
         @include red-text;
         padding-top: 5px;
         padding-bottom: 30px;
-        
     }
     &__regular{
         @include text (700, 16px, 20px, $grey-text);
@@ -34,7 +33,6 @@
     &__small{
         @include text (400, 14px, 22px, $grey-text);
     }
-    
     &__btn{
         justify-self: center;
     }
@@ -50,12 +48,10 @@
         &--active{
             background-color: rgba(36, 163, 255, 1)
         }
-        
     }
     &__circle:active{
-        background-color: rgba(36, 163, 255, 1)
+        background-color: rgba(36, 163, 255, 1);
     }
-    
     &__clients{
         text-align: center;
         padding-top: 60px;
@@ -271,7 +267,6 @@
         @include text (400, 14px, 22px, $basic-black)
     }
 }
-
 @media screen and (min-width: 768px){
     .main-content{
         padding-top: 80px;
@@ -323,7 +318,7 @@
             margin: 0;
             display: grid;
             grid-template-columns:  min-content 1fr;
-            grid-template-rows:  min-content min-content ;
+            grid-template-rows:  min-content min-content;
         }
         &__pic{
             & img {

@@ -7,7 +7,7 @@
             @include red-text;
         }
         & p{
-            @include text( 400, 19px, 30px, $basic-black)
+            @include text( 400, 19px, 30px, $basic-black);
         }
     }
     &__padding{
@@ -82,7 +82,7 @@
     }
     &__paragraph{
         & p{
-            @include text( 400, 19px, 30px, $basic-black)
+            @include text( 400, 19px, 30px, $basic-black);
         }
     }
     &__bot{

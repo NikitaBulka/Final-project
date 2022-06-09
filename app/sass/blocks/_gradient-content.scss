@@ -46,7 +46,6 @@
         padding-top: 30px;
         padding-bottom: 15px;
         }
-
         & p{
             @include text (400, 16px, 26px,  $basic-white);
         }
@@ -61,7 +60,6 @@
         }
     }
 }
-
 @media screen and (min-width: 768px){
     .gradient-content{
         padding-left: 0;

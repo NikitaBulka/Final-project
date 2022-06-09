@@ -21,7 +21,7 @@
         padding-bottom: 30px;
     }
     &__adress{
-        @include text (400, 16px, 20px, $main-regular)
+        @include text (400, 16px, 20px, $main-regular);
     }
     &__map{
         margin-top: 10px;
