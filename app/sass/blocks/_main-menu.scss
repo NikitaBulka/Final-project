@@ -25,26 +25,20 @@
             padding-bottom: 15px;
         }
     }
-
-    &__item{
+    &__link{
         @include text(700, 24px, 29px, $regular);
         text-decoration: none;
-        padding: 7px 0;
-        &:not(.main-menu__item--accent):hover{
+        border-bottom: 2px solid transparent;
+        &:not(.main-menu__white--accent):hover{
             color:$hover;
         }
-        &:not(.main-menu__item--accent):active{
+        &:not(.main-menu__white--accent):active{
             color:$active;
         }
         &--accent{
-            color:$accent;
-        }
-        &--active{
-            color:$accent;
-            border-bottom: 2px solid $accent;
+            color: $accent;
         }
     }
-    
 }
 @media screen and (min-width: 768px){
     .main-menu{
@@ -65,36 +59,30 @@
             & li{
                 margin-right: 15px;
                 padding: 0;
-                
                 &:not(:last-child){
                     padding-bottom: 0;
                 }
             }
         }
-        &__item{
-            padding: 0;
-            padding-bottom: 3px;
+        &__link{
             @include text(700, 16px, 20px, $basic-white);
-            &:not(.main-menu__item--accent):hover{
-                color: $basic-white;
-                border-bottom: 2px solid $basic-white;
-            }
-            &:not(.main-menu__item--accent):active{
+            font-weight: 700;
+            &:not(.main-menu__white--accent):hover{
                 color:$accent;
                 border-bottom: 2px solid $accent;
+            }
+            &:not(.main-menu__white--accent):active{
+                color:$accent;
+                border-bottom: 2px solid $accent;
+            }
+            &--accent{
+                color: $accent;
+                border-bottom: 2px solid $accent; 
             }
             &--white{
                 @include text(700, 16px, 20px, $regular);
-                &:not(.main-menu__item--accent):hover{
-                    color: $regular;
-                    border-bottom: 2px solid $regular;
-                }
             }
-            &--accent{
-                color:$accent;
-                border-bottom: 2px solid $accent;
-            }
-        }
+        } 
     }
 }
 @media screen and (min-width: 1024px){

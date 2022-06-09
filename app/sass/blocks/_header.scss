@@ -78,6 +78,7 @@
     &__page{
         display: flex;
         align-items: center;
+        padding-top: 6px;
         @include text (400, 20px, 24px, $main-regular);
         &::before{
             content: '';
@@ -108,7 +109,7 @@
             
             &::before{
                 content: '';
-                margin-right: 6px;
+                margin: 0 6px;
                 display: inline-block;
                 width: 6px;
                 height: 6px;
@@ -150,6 +151,19 @@
             padding: 30px 0;
             width: 130px;
         }
+        &__page{
+            @include text (400, 36px, 44px, $main-regular);
+            padding-top: 0;
+            padding-bottom: 18px;
+            &::before{
+                content: '';
+                margin: 0 4px;
+                display: inline-block;
+                background-image: url('../../img/slash-small.svg');
+                width: 21px;
+                height: 47px;
+            }
+        }
     }
 }
 @media screen and (min-width: 1024px){
@@ -175,5 +189,6 @@
             padding:  0;
             width: 130px;
         }
+    
     }
 }

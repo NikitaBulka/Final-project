@@ -11,6 +11,7 @@
         }
     }
     &__padding{
+        padding-top: 28px;
             padding-bottom: 30px;
         }
     &__info{
@@ -34,6 +35,7 @@
     &__num-1{
         display: flex;
         align-items: center;
+        padding-bottom: 10px;
         &::before{
             content: '';
             display: block;
@@ -47,6 +49,7 @@
     &__num-2{
         display: flex;
         align-items: center;
+        padding-bottom: 10px;
         &::before{
             content: '';
             display: block;
@@ -60,6 +63,7 @@
     &__num-3{
         display: flex;
         align-items: center;
+        padding-bottom: 10px;
         &::before{
             content: '';
             display: block;
@@ -72,30 +76,43 @@
     }
     &__box{
         padding: 30px 15px 60px ;
-        & p{
-            @include text( 400, 19px, 30px, $basic-black)
-        }
-        & p:last-child{
-            @include red-text;
-        }
         & p:not(:last-child){
             padding-bottom: 30px;
         }
+    }
+    &__paragraph{
+        & p{
+            @include text( 400, 19px, 30px, $basic-black)
+        }
+    }
+    &__bot{
+        @include red-text;
     }
 }
 @media screen and (min-width: 768px){
     .main-white{
         &__intro{
-        padding: 60px 0;
+        padding: 60px 0;    
+        }
+        &__text{
+            & h4{
+                @include red-text;
+                font-size: 38px;
+                line-height: 46px
+            }
+        }
+        &__info{
+            width: 388px;
+            height: 322px;
         }
         &__box{
             padding-right: 0;
             padding-left: 0;
-            & p:last-child{
-                @include red-text;
-                font-size: 38px;
-                line-height: 46px;
-            }
+        }
+        &__bot{
+            @include red-text;
+            font-size: 38px;
+            line-height: 46px;
         }
     }  
 }
@@ -103,11 +120,35 @@
     .main-white{
         &__intro{
             display:grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             grid-template-rows: 1fr;
         }
         &__info{
+            justify-self: flex-end;
             padding-top: 0;
+        }
+        &__box{
+            display: grid;
+            grid-template-columns: 1fr min-content;
+            grid-template-rows:min-content;
+            gap: 60px;
+        }
+        &__paragraph{
+            display: flex;
+            flex-direction: column;
+        }
+        &__bot{
+            width: 362px;
+            justify-self: flex-end;
+        }
+    }
+}
+@media screen and (min-width: 1200px){
+    .main-white{
+        &__intro,
+        &__box{
+            padding-left: 120px;
+            padding-right: 120px;
         }
     }
 }

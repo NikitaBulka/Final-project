@@ -12,17 +12,16 @@
         <header class="header">
             <div class="header__top">
                 <div class="header__lang header__lang--white">
-                    <a class="header__lang-item  header__lang-item--active header__lang-item--white" href="#">en</a>
-                    <a class="header__lang-item " href="#">ua</a>
+                    <a class="header__lang-item" href="#">ua</a>
                     <a class="header__lang-item" href="#">plc</a>
+                    <a class="header__lang-item header__lang-item--active" href="#">en</a>
                 </div>
                 <div class="header__adress">Kyiv, Mechnikova str., 14/1</div>
                 <a class="header__phone header__phone--white" href="tel:0800211927">0800 211 927</a>
                 <a class="header__fb header__fb--white" href="#">
                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="#B3B3BA"/>
-                        </svg>
-                          
+                    <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="#B3B3BA"/>
+                    </svg>
                 </a>
             </div>
             <div class="header__logos">
@@ -36,11 +35,11 @@
             <nav class="main-menu">
                 <button class="main-menu__btn main-menu__btn--white" type="button"></button>
                 <ul class="main-menu__list">
-                    <li><a class="main-menu__item main-menu__item--accent main-menu__item--white" href="#">about us</a></li>
-                    <li><a class="main-menu__item main-menu__item--white" href="#">services</a></li>
-                    <li><a class="main-menu__item main-menu__item--white" href="#">team</a></li>
-                    <li><a class="main-menu__item main-menu__item--white" href="#">publications</a></li>
-                    <li><a class="main-menu__item main-menu__item--white" href="#">contact</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link main-menu__link--accent" href="#">about us</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">services</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">team</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">publications</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -69,14 +68,20 @@
                     </div>
                 </div>
             </section>
+        </div>
+        <div class="container container--clients">
             <div class="team-pic">
                 <p>Team</p> 
             </div>
+        </div>
+        <div class="container">
             <div class="main-white__box">
-                <p>The historically unchanged legal profession has begun to reformat in recent years. Clients are feeling this, but law firms are still resisting evolution. Clients need convenience, simplicity, transparent payment. Google, IBM WatsOn, Symantec Clearwell prove that the technological revolution in legal services has begun and is imminent.</p>
-                <p>Quality is what we care about the most.</p>
-                <p>It's simple. If you are unhappy with our work, we will refund your money. We trust our clients. And we want our clients to trust us too.</p>
-                <p>Quality is what we care about the most.</p>
+                <div class="main-white__paragraph">
+                    <p>The historically unchanged legal profession has begun to reformat in recent years. Clients are feeling this, but law firms are still resisting evolution. Clients need convenience, simplicity, transparent payment. Google, IBM WatsOn, Symantec Clearwell prove that the technological revolution in legal services has begun and is imminent.</p>
+                    <p>Quality is what we care about the most.</p>
+                    <p>It's simple. If you are unhappy with our work, we will refund your money. We trust our clients. And we want our clients to trust us too.</p>
+                </div>
+                <p class="main-white__bot">Quality is what we care about the most.</p>
             </div>
             <section class="main-slider">
                 <h2>achievements</h2>

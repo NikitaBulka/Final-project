@@ -9,6 +9,7 @@
         text-transform: uppercase;
     }
     &__box{
+        align-self: stretch;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: min-content;
@@ -34,6 +35,9 @@
             width: 106px;
             height: 40px;
         }
+        &--display{
+            display: none;
+        }
     }
     &__item-3{
         display: flex;
@@ -42,6 +46,9 @@
         & img{
             width: 130px;
             height: 40px;
+        }
+        &--display{
+            display: none;
         }
     }
     &__item-4{
@@ -52,9 +59,6 @@
             width: 111;
             height: 40px;
         }
-    }
-    
-    &__item{
         &--display{
             display: none;
         }
@@ -90,7 +94,7 @@
         padding: 30px 0;
         &__box{
             display: grid;
-            grid-template-columns: repeat(4,132px);
+            grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 90px;
             gap: 40px;
             padding: 30px 0;
@@ -109,6 +113,38 @@
         &__btn{
             &--display{
                 display: none;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .main-slider{
+        &__box{
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 110px;
+        }
+        &__item-1{
+            & img{
+                width: 80px;
+                height: 60px;
+            }
+        }
+        &__item-2{
+            & img{
+                width: 159px;
+                height: 60px;
+            }
+        }
+        &__item-3{
+            & img{
+                width: 195px;
+                height: 60px;
+            }
+        }
+        &__item-4{
+            & img{
+                width: 166px;
+                height: 60px;
             }
         }
     }

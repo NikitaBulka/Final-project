@@ -24,7 +24,7 @@
         @include text (400, 16px, 20px, $main-regular)
     }
     &__map{
-        padding-top: 10px;
+        margin-top: 10px;
         @include text (700, 12px, 15px, $regular);
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -85,7 +85,7 @@
             display: flex;
             align-items: center;
             order: -2;
-            padding: 0;
+            margin: 0;
             &::before{
                 content: '';
                 display: block;
