@@ -5,7 +5,7 @@
     width: 375px;
     height: 114px;
     margin: 0 -15px;
-    background-image: url(../../img/team-mob.png);
+    background-image: url(../img/team-mob.png);
     background-size: cover;
     & p{
         @include text(700, 36px, 44px, $basic-white);
@@ -20,7 +20,7 @@
         width: 100%;
         height: 234px;
         margin: 0;
-        background-image: url(../../img/team-labtop.png);
+        background-image: url(../img/team-labtop.png);
         & p{
         padding-left: 50px;
         @include text(700, 46px, 56px, $basic-white);
@@ -33,7 +33,7 @@
         width: 100%;
         height: 312px;
         margin: 0;
-        background-image: url(../../img/team-dasktop.png);
+        background-image: url(../img/team-dasktop.png);
         & p{
         padding-left: 50px;
         @include text(700, 85px, 106px, $basic-white);
@@ -46,7 +46,7 @@
         width: 100%;
         height: 438px;
         margin: 0;
-        background-image: url(../../img/team-big.png);
+        background-image: url(../img/team-big.png);
         & p{
         padding-left: 50px;
         @include text(700, 96px, 117px, $basic-white);

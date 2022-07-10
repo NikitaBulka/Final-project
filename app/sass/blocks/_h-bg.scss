@@ -1,5 +1,5 @@
 .h-bg{
-    background-image: url(../../img/symbol-sm.png);
+    background-image: url(../img/symbol-sm.png);
     background-repeat: no-repeat;
     object-fit: cover;
     height: 600px;
@@ -32,7 +32,7 @@
 }
 @media screen and (min-width: 768px){
     .h-bg{
-        background-image: url(../../img/symbol-tabl.png);
+        background-image: url(../img/symbol-tabl.png);
         background-repeat: no-repeat;
         height: 1024px;
         &__content{
@@ -45,7 +45,7 @@
 }
 @media screen and (min-width: 1024px){
     .h-bg{
-        background-image: url(../../img/symbol-lab.png);
+        background-image: url(../img/symbol-lab.png);
         background-position: center top;
         height: 768px;
         &__content{

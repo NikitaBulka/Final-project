@@ -1,38 +1,78 @@
 .main-menu{
+    
     &__btn{
-        width: 32px;
-        height: 32px;
-        background-image: url(../../img/hamburger-white.png);
-        border: 0;
-        background-color: transparent;
+        width: 18px;
+        height: 12px;
+        position: relative;
         cursor: pointer;
-        &--white{
-            background-image: url(../../img/hamburger.png);
+        & span{
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $basic-white;
+        position: absolute;
+        transition: all .3s ease;
+        }
+        &--white span{
+            background-color: $main-regular;
+        }
+        & span:nth-child(1) {
+            top: 0;
+        }
+        & span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        & span:nth-child(3) {
+            bottom: 0;
+        }
+        &.show{
+           display: none;
         }
     }
-    &__list{
+    &__bg{
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
         position: absolute;
         right: 0;
         top: 102px;
         width: 100%;
-        list-style: none;
-        padding: 64px 12px 12px 12px;
+        padding: 12px;
         text-align: center;
         background: #FFFFFF;
         border-radius: 12px 12px 0px 0px;
-        display: none;
-        & li:not(:last-child){
-            padding-bottom: 15px;
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease;
+        &.show{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
         }
+    }
+    &__cross{
+        align-self: flex-end;
+        width: 32px;
+        height: 32px;
+    }
+    &__list{
+        padding-top: 20px;
+        list-style: none;
+        padding-left:0; 
+    }
+    &__item:not(:last-child){
+        padding-bottom: 15px;
     }
     &__link{
         @include text(700, 24px, 29px, $regular);
         text-decoration: none;
         border-bottom: 2px solid transparent;
-        &:not(.main-menu__white--accent):hover{
+        &:not(.main-menu__link--accent):hover{
             color:$hover;
         }
-        &:not(.main-menu__white--accent):active{
+        &:not(.main-menu__link--accent):active{
             color:$active;
         }
         &--accent{
@@ -43,12 +83,22 @@
 @media screen and (min-width: 768px){
     .main-menu{
         &__btn{
-        display: none;
+            display: none;
+           
+        }
+        &__cross{
+            display: none;
+        }
+        &__bg{ 
+            position: relative;
+            top: 0;
+            padding: 0;
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+            background-color:transparent;
         }
         &__list{
-            position: relative;
-            right: 0;
-            top: 0;
             display: flex;
             list-style: none;
             padding: 12px;
@@ -56,22 +106,24 @@
             background: none;
             border-radius: 0;
             padding: 0;
-            & li{
-                margin-right: 15px;
-                padding: 0;
-                &:not(:last-child){
-                    padding-bottom: 0;
-                }
+            
+        }
+        &__item{
+            margin-right: 15px;
+            padding: 0;
+            &:not(:last-child){
+                padding-bottom: 0;
             }
         }
+        
         &__link{
             @include text(700, 16px, 20px, $basic-white);
             font-weight: 700;
-            &:not(.main-menu__white--accent):hover{
+            &:not(.main-menu__link--accent):hover{
                 color:$accent;
                 border-bottom: 2px solid $accent;
             }
-            &:not(.main-menu__white--accent):active{
+            &:not(.main-menu__link--accent):active{
                 color:$accent;
                 border-bottom: 2px solid $accent;
             }
@@ -91,7 +143,7 @@
         &__list{
             justify-content: flex-end;
         }
-        & li:last-child {
+        &__item:last-child {
             margin-right: 0;
         }
     }

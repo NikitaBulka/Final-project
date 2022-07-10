@@ -75,8 +75,6 @@
         grid-template-rows: min-content;
         gap: 60px;
         align-items: center;
-        padding-left: 120px;
-        padding-right: 120px;
         &__block{
             width: 439px;
             height: 303px;
@@ -96,5 +94,11 @@
         &__text{
             padding:  0;
         }
+    }
+}
+@media screen and (min-width: 1440px){
+    .gradient-slider{
+        padding-left: 120px;
+        padding-right: 120px;
     }
 }

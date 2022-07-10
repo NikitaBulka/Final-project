@@ -8,12 +8,13 @@
     <title>Document</title>
 </head>
 <body class="body">
+    <div class="header__overlay"></div> 
     <div class="container">
         <header class="header">
             <div class="header__top">
                 <div class="header__lang header__lang--white">
                     <a class="header__lang-item" href="#">ua</a>
-                    <a class="header__lang-item" href="#">plc</a>
+                    <a class="header__lang-item" href="#">pl</a>
                     <a class="header__lang-item header__lang-item--active" href="#">en</a>
                 </div>
                 <div class="header__adress">Kyiv, Mechnikova str., 14/1</div>
@@ -33,14 +34,24 @@
                 </div>
             </div>
             <nav class="main-menu">
-                <button class="main-menu__btn main-menu__btn--white" type="button"></button>
-                <ul class="main-menu__list">
-                    <li class="main-menu__item"><a class="main-menu__link main-menu__link--accent" href="#">about us</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">services</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">team</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">publications</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">contact</a></li>
-                </ul>
+                <div class="main-menu__btn main-menu__btn--white">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="main-menu__bg">
+                    <div class="main-menu__cross">
+                        <img src="./img/cross.svg" alt="cross">
+                    </div>
+                    <ul class="main-menu__list">
+                        <li class="main-menu__item"><a class="main-menu__link main-menu__link--accent" href="#">about us</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">services</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">team</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">publications</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link main-menu__link--white" href="#">contact</a></li>
+                    </ul>
+                </div>
+                
             </nav>
         </header>
     </div>
@@ -130,4 +141,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
+</html>

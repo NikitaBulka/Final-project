@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body class="body">
+    <div class="header__overlay"></div> 
     <div class="gradient">
         <div class="h-bg img-resonsive">
             <div class="container">
@@ -15,7 +16,7 @@
                     <div class="header__top">
                         <div class="header__lang">
                             <a class="header__lang-item" href="#">ua</a>
-                            <a class="header__lang-item" href="#">plc</a>
+                            <a class="header__lang-item" href="#">pl</a>
                             <a class="header__lang-item header__lang-item--active" href="#">en</a>
                         </div>
                         <div class="header__adress">Kyiv, Mechnikova str., 14/1</div>
@@ -32,14 +33,23 @@
                         </a>
                     </div>
                     <nav class="main-menu">
-                        <button class="main-menu__btn" type="button"></button>
-                        <ul class="main-menu__list">
-                            <li class="main-menu__item"><a class="main-menu__link" href="about.html">about us</a></li>
-                            <li class="main-menu__item"><a class="main-menu__link" href="#">services</a></li>
-                            <li class="main-menu__item"><a class="main-menu__link" href="#">team</a></li>
-                            <li class="main-menu__item"><a class="main-menu__link" href="#">publications</a></li>
-                            <li class="main-menu__item"><a class="main-menu__link" href="#">contact</a></li>
-                        </ul>
+                        <div class="main-menu__btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="main-menu__bg">
+                            <div class="main-menu__cross">
+                                <img src="./img/cross.svg" alt="cross">
+                            </div>
+                            <ul class="main-menu__list">
+                                <li class="main-menu__item"><a class="main-menu__link" href="about.html">about us</a></li>
+                                <li class="main-menu__item"><a class="main-menu__link" href="#">services</a></li>
+                                <li class="main-menu__item"><a class="main-menu__link" href="#">team</a></li>
+                                <li class="main-menu__item"><a class="main-menu__link" href="#">publications</a></li>
+                                <li class="main-menu__item"><a class="main-menu__link" href="#">contact</a></li>
+                            </ul>
+                        </div>
                     </nav>
                 </header>
                 <div class="h-bg__content">
@@ -242,5 +252,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
