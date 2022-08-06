@@ -1,0 +1,24 @@
+.main-team{
+    padding: 0 -15px;
+    padding-top: 30px;
+    &__list{
+        padding: 0 15px;
+    }
+    &__text{
+    @include red-text;
+    }
+    &__item{
+        padding-top: 30px;
+        & img{
+            height: 300px;
+            width: 100%;
+            border-radius: 12px;
+        }
+    }
+    &__main{
+        @include text (700, 16px, 20px, $main-regular)
+    }
+    &__grey{
+        @include text (400, 14px, 22px, $grey-text)
+    }
+}

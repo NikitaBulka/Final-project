@@ -2189,4 +2189,48 @@
   }
 }
 
+.main-team {
+  padding: 0 -15px;
+  padding-top: 30px;
+}
+
+.main-team__list {
+  padding: 0 15px;
+}
+
+.main-team__text {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.main-team__item {
+  padding-top: 30px;
+}
+
+.main-team__item img {
+  height: 300px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.main-team__main {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #323264;
+}
+
+.main-team__grey {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3B3BA;
+}
+
 /*# sourceMappingURL=style.css.map */
